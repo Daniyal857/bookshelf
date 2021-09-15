@@ -8,8 +8,6 @@ import * as colors from 'styles/colors'
 import {StatusButtons} from './status-buttons'
 import {Rating} from './rating'
 
-// 💣 remove the user prop
-// the children components that needed it can get it from context
 function BookRow({book}) {
   const {title, author, coverImageUrl} = book
 

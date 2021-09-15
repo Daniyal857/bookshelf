@@ -6,7 +6,6 @@ import {BookListUL} from './lib'
 import {BookRow} from './book-row'
 
 function ListItemList({filterListItems, noListItems, noFilteredListItems}) {
-  // 🐨 remove the user from this call
   const listItems = useListItems()
 
   const filteredListItems = listItems.filter(filterListItems)

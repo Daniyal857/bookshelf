@@ -15,12 +15,9 @@ import {Spinner, Textarea, ErrorMessage} from 'components/lib'
 import {Rating} from 'components/rating'
 import {StatusButtons} from 'components/status-buttons'
 
-// 💣 remove the user prop
 function BookScreen() {
   const {bookId} = useParams()
-  // 💣 remove the user argument
   const book = useBook(bookId)
-  // 💣 remove the user argument
   const listItem = useListItem(bookId)
 
   const {title, author, coverImageUrl, publisher, synopsis} = book
@@ -100,14 +97,11 @@ function ListItemTimeframe({listItem}) {
   )
 }
 
-// 💣 remove the user prop here
 function NotesTextarea({listItem}) {
-  // 💣 remove the user argument here
   const [mutate, {error, isError, isLoading}] = useUpdateListItem()
-  const debouncedMutate = React.useMemo(
-    () => debounceFn(mutate, {wait: 300}),
-    [mutate],
-  )
+  const debouncedMutate = React.useMemo(() => debounceFn(mutate, {wait: 300}), [
+    mutate,
+  ])
 
   function handleNotesChange(e) {
     debouncedMutate({id: listItem.id, notes: e.target.value})
