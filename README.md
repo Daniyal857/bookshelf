@@ -45,9 +45,6 @@ npm start
 This should start up your browser. If you're familiar, this is a standard
 [react-scripts](https://create-react-app.dev/) application.
 
-You can also open the production deployment:
-[bookshelf.lol](https://bookshelf.lol).
-
 ## Running the tests
 
 ```shell
